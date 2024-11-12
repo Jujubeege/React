@@ -18,7 +18,7 @@
   }
   
   .blogPostMeta {
-    display: flex;
+    flex-direction: column;
     gap: 1rem;
     color: #9ca9b5;
     font-size: 0.9rem;
@@ -27,6 +27,7 @@
   .blogPostAuthor{
     line-height: 1.6;
     color: #d3500a;
+    padding-right: 10px;
   }
 
   .blogPostDate{
