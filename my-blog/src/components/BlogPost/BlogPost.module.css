@@ -31,6 +31,7 @@
   }
 
   .blogPostDate{
+    font-weight: bold;
     line-height: 1.6;
     color: #475562;
   }
@@ -40,8 +41,19 @@
     color: #475562;
   }
 
+  .blogPostContent{
+    line-height: 1.6;
+    color: #819aaf;
+    align-content: center;
+  }
 
+  .blogPostAction{
+    color: #819aaf;
+  }
 
+  .blogPostExpand{
+    color: #d3500a;
+  }
   .content {
     line-height: 1.6;
     color: #475562;
