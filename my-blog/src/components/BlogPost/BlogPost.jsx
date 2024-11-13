@@ -9,8 +9,8 @@ function BlogPost({ title, content, author, date, readTime }) {
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.blogPostMeta}>
           <span className={styles.blogPostAuthor}>By {author}</span>
-          <time className="blog-post__date">{date}</time>
-          <span className="blog-post__read-time">{readTime} min read</span>
+          <time className={styles.blogPostDate}>{date}</time>
+          <span className={styles.blogPostReadTime}>{readTime} min read</span>
         </div>
       </div>
       
