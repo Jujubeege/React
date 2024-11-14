@@ -7,6 +7,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+# assignment 0
+
 # My React Blog
 
 In this assignment I learnet how to set up a react. as well as using GIT to make branches and also to merger branches when it is completed
@@ -30,6 +32,8 @@ The structure currently, is we added a components directory in the src directory
 
 In this assignment I learnet how to set up a react. as well as using Git to make branches and also to merger branches when it is completed. I also learned that branches still retain its content of what was done within them even after being merged
 
+# Assignment 1
+
 ## Components Structure
 
 - BlogPost: Individual blog post display
@@ -38,7 +42,7 @@ In this assignment I learnet how to set up a react. as well as using Git to make
 
 ## Styling Approach
 
-[Explain your chosen styling approach and why]
+Using BlogPost.module.css, I made some changes to how the contents presents. for One the default position of the metadat, was towards the left of the box, using a flexbox, i moved it to the center. I changed the colors of the author to a reddish orange, so it stands out more in a dark background. the content box itself is black, while the text is a whitish grey.
 
 ## New Features
 
