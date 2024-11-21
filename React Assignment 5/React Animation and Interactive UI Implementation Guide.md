@@ -1,19 +1,21 @@
 # Building Animated and Interactive UI Components in React
+
 A Comprehensive Guide to Animations and Interactions
 
 ## 1. Core Animation Concepts
 
 ### CSS Transitions vs React Motion
+
 In React, we have two primary approaches to animations. CSS transitions offer a simple, declarative way to animate between states using pure CSS, while React Motion (or Framer Motion) provides more powerful, programmatic control over animations. CSS transitions are great for simple state changes, while motion libraries excel at complex, orchestrated animations.
 
 ```jsx
 // CSS Transition approach
 const Button = () => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     // Button element with dynamic class based on hover state
-    <button 
+    <button
       // Combines base class with conditional hover class
       className={`button ${isHovered ? 'button--hovered' : ''}`}
       // Sets hover state to true on mouse enter
@@ -61,6 +63,7 @@ const Card = () => {
 ```
 
 ### Understanding Animation Types
+
 Animations in React can be categorized into three main types: keyframe animations for complex multi-step animations, transition animations for state changes, and gesture animations for interactive elements. Each serves a different purpose and helps create a more engaging user interface.
 
 ```jsx
@@ -75,13 +78,13 @@ const Loader = () => (
         // Rotation animation steps
         rotate: [0, 0, 270, 270, 0],
         // Border radius morphing steps
-        borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+        borderRadius: ["20%", "20%", "50%", "50%", "20%"],
       }}
       // Animation configuration
       transition={{
         duration: 2,
         ease: "easeInOut",
-        repeat: Infinity  // Loop forever
+        repeat: Infinity, // Loop forever
       }}
     />
   </div>
@@ -127,13 +130,14 @@ const DraggableItem = () => (
 ```
 
 ### Animation Performance Patterns
+
 Performance is crucial for smooth animations. The key patterns include using layout animations for position changes, optimizing list animations with proper keys and staggering, and leveraging GPU acceleration. These patterns help ensure animations run at 60fps and don't cause performance issues.
 
 ```jsx
 // Layout animation with smooth transitions
 const SwitchButton = () => {
   const [isOn, setIsOn] = useState(false);
-  
+
   return (
     // Container for the switch
     <div className="switch" onClick={() => setIsOn(!isOn)}>
@@ -143,7 +147,7 @@ const SwitchButton = () => {
         className="switch-handle"
         // Animate position based on state
         style={{
-          x: isOn ? 20 : 0
+          x: isOn ? 20 : 0,
         }}
       />
     </div>
@@ -162,18 +166,18 @@ const AnimatedList = ({ items }) => (
       visible: {
         transition: {
           // Delay between each child animation
-          staggerChildren: 0.1
-        }
-      }
+          staggerChildren: 0.1,
+        },
+      },
     }}
   >
-    {items.map(item => (
+    {items.map((item) => (
       <motion.li
         key={item.id}
         // Animation variants for list items
         variants={{
           hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 }
+          visible: { opacity: 1, y: 0 },
         }}
         // Enable smooth reordering
         layout
@@ -189,14 +193,14 @@ const PerformantCard = () => (
   <motion.div
     style={{
       // Force GPU acceleration
-      transform: 'translateZ(0)',
+      transform: "translateZ(0)",
       // Inform browser about upcoming animations
-      willChange: 'transform'
+      willChange: "transform",
     }}
     // Use transform-based animations for better performance
     animate={{
-      x: 100,  // Instead of left: 100px
-      scale: 1.1  // Instead of width/height
+      x: 100, // Instead of left: 100px
+      scale: 1.1, // Instead of width/height
     }}
   >
     Smooth Animation
@@ -205,6 +209,7 @@ const PerformantCard = () => (
 ```
 
 ### Accessibility and Animation
+
 Animations must be built with accessibility in mind. This includes respecting user preferences for reduced motion, providing appropriate ARIA labels, and ensuring animations don't interfere with screen readers. Good animation accessibility means providing an equivalent experience for all users, regardless of their needs or preferences.
 
 ```jsx
@@ -212,7 +217,7 @@ Animations must be built with accessibility in mind. This includes respecting us
 const AccessibleAnimation = ({ children }) => {
   // Check user's motion preference
   const prefersReducedMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
+    "(prefers-reduced-motion: reduce)"
   ).matches;
 
   return (
@@ -221,7 +226,7 @@ const AccessibleAnimation = ({ children }) => {
       animate={{ opacity: 1 }}
       // Skip animation if user prefers reduced motion
       transition={{
-        duration: prefersReducedMotion ? 0 : 0.5
+        duration: prefersReducedMotion ? 0 : 0.5,
       }}
     >
       {children}
@@ -241,7 +246,7 @@ const LoadingSpinner = () => (
     transition={{
       duration: 1,
       repeat: Infinity,
-      ease: "linear"
+      ease: "linear",
     }}
   >
     {/* Hidden text for screen readers */}
