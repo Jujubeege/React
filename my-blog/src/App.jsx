@@ -1,8 +1,9 @@
-import Header from './components/Header';
-import BlogList from './components/BlogList/BlogList';
-import { posts } from './data/posts';
-import './App.css';
-import PostEditor from './components/PostEditor/PostEditor';
+import Header from "./components/Header";
+import BlogList from "./components/BlogList/BlogList";
+import { posts } from "./data/posts";
+import { router } from "./router/index.jsx";
+import "./App.css";
+import PostEditor from "./components/PostEditor/PostEditor";
 
 function App() {
   return (
