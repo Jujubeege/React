@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../components/Layout";
-import Home from "../pages/Home";
-import BlogList from "../pages/BlogList";
-import PostDetail from "../pages/PostDetail";
-import NewPost from "../pages/NewPost";
-import EditPost from "../pages/EditPost";
-import Profile from "../pages/Profile";
-import NotFound from "../pages/NotFound";
+import Layout from "../components/Layout/Layout";
+import Home from "../pages/Home/Home";
+import PostDetail from "../pages/PostDetail/PostDetail";
+import NewPost from "../pages/NewPost/NewPost";
+import EditPost from "../pages/EditPost/EditPost";
+import Profile from "../pages/Profile/Profile";
+import BlogList from "../components/BlogList/BlogList";
+import { posts } from "../data/posts";
+
+import NotFound from "../pages/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +25,7 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <BlogList />,
+            element: <BlogList posts={posts} />,
           },
           {
             path: ":id",

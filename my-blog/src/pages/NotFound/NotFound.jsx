@@ -1,5 +1,5 @@
 import { useNavigate, useRouteError } from "react-router-dom";
-import "./NotFound.css";
+//import "./NotFound.css";
 
 function NotFound() {
   const navigate = useNavigate();
