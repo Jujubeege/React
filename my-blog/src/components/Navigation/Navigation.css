@@ -1,0 +1,29 @@
+.navigation {
+}
+
+.navigation__toggle {
+  z-index: 7;
+  color: aquamarine;
+  background-color: blueviolet;
+  position: sticky;
+  top: 2px;
+}
+
+.navigation__menu {
+  position: fixed;
+}
+
+.navigation__item {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: navajowhite;
+  padding: 1rem;
+  margin: 2rem;
+  border: 5rem;
+  position: sticky;
+  top: 2px;
+}
+
+.is-open {
+  visibility: hidden;
+}

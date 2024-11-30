@@ -27,6 +27,7 @@ function Navigation() {
         aria-expanded={isMenuOpen}
         aria-label="Toggle navigation"
       >
+        Open Menu
         <span className="navigation__toggle-icon"></span>
       </button>
 

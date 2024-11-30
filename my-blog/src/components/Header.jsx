@@ -5,16 +5,16 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a href="Home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="Blog">Blog</a>
+            <a href="/posts">Blog</a>
           </li>
           <li>
-            <a href="New_Post">New Post</a>
+            <a href="/posts/new">New Post</a>
           </li>
           <li>
-            <a href="Profile">Profile</a>
+            <a href="/profile">Profile</a>
           </li>
         </ul>
       </nav>
